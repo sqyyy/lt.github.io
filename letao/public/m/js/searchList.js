@@ -26,24 +26,7 @@ $(function () {
             $('.lt_product').html(template('list', data));
         });
     });
-    $('.lt_orders a').on('tap', function () {
-        if ($(this).hasClass('now')) {
-            $(this).find('span').toggleClass('fa-angle-up').toggleClass('fa-angle-down');
-        }
-        $(this).addClass('now').siblings().removeClass('now')
-            .find('span').removeClass('fa-angle-up').addClass('fa-angle-down');
-        var order = $(this).data('order');
-        var orderVal = $(this).find('span').hasClass('fa-angle-up') ? 1 : 2;
-        var params = {
-            page: 1,
-            pageSize: 4,
-            proName: $.trim($input.val()),
-        };
-        params[order] = orderVal;
-        getSearchData(params, function (data) {
-            $('.lt_product').html(template('list', data));
-        });
-    });
+  var that={};
     mui.init({
         pullRefresh: {
             container: "#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
@@ -55,7 +38,7 @@ $(function () {
                 // offset:'0px', //可选 默认0px,下拉刷新控件的起始位置
                 auto: true,//可选,默认false.首次加载自动上拉刷新一次
                 callback: function () {
-                    var that = this;
+                     that = this;
                     var key = $.trim($input.val());
                     if (!key) {
                         mui.toast('请输入搜索内容',
@@ -84,7 +67,6 @@ $(function () {
                 contentnomore: '没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
                 callback: function () {
                     window.page++;
-                    var that = this;
                     var key = $.trim($input.val());
                     if (!key) {
                         mui.toast('请输入搜索内容',
@@ -113,6 +95,26 @@ $(function () {
                 }
             }
         }
+    });
+
+    $('.lt_orders a').on('tap', function () {
+        if ($(this).hasClass('now')) {
+            $(this).find('span').toggleClass('fa-angle-up').toggleClass('fa-angle-down');
+        }
+        $(this).addClass('now').siblings().removeClass('now')
+            .find('span').removeClass('fa-angle-up').addClass('fa-angle-down');
+        var order = $(this).data('order');
+        var orderVal = $(this).find('span').hasClass('fa-angle-up') ? 1 : 2;
+        var params = {
+            page: 1,
+            pageSize: 4,
+            proName: $.trim($input.val()),
+        };
+        params[order] = orderVal;
+        getSearchData(params, function (data) {
+            $('.lt_product').html(template('list', data));
+            that.refresh(true);
+        });
     });
 });
 var getSearchData = function (params, callback) {

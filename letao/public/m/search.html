@@ -32,7 +32,8 @@
                 </form>
                 <a href="javascript:;">搜索</a>
             </div>
-            <div class="lt_history"></div>
+            <div class="lt_history">
+            </div>
         </div>
     </div>
     <footer class="lt_footer">
@@ -42,6 +43,21 @@
         <a class="tab_user fa fa-user" href="user/index.html"><span>会员中心</span></a>
     </footer>
 </div>
+<script type="text/template" id="searchList">
+    <% if(list && list.length){ %>
+    <div class="mui-clearfix">
+        <span class="title">搜索历史</span>
+        <span class="icon_clear fa fa-trash"> 清空记录</span>
+    </div>
+    <ul>
+        <% for(var i = list.length-1 ; i >=0 ; i --){ %>
+        <li><a data-key="<%=list[i]%>" href="javascript:;"><%=list[i]%></a><span class="icon_delete fa fa-close"></span></li>
+        <% } %>
+    </ul>
+    <%}else{%>
+    <span class="title">没有历史搜索记录。</span>
+    <%}%>
+</script>
 <script src="assets/mui/js/mui.min.js"></script>
 <script src="assets/zepto/zepto.min.js"></script>
 <script src="assets/artTemplate/template-native.js"></script>
