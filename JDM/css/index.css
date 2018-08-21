@@ -1,0 +1,300 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 1000px;
+}
+
+.search {
+    background: rgba(200, 20, 35, 0);
+    height: 40px;
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.search .icon_logo {
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 60px;
+    height: 37px;
+    background-position: 0 -103px;
+
+}
+
+.search .login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.search form {
+    width: 100%;
+    padding: 0 50px 0 70px;
+    position: relative;
+}
+
+.search form .icon_search {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    background-position: -60px -109px;
+}
+
+.search form input {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding-left: 40px;
+    padding-right: 10px;
+    background: #eeeeee;
+}
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner ul {
+    width: 1000%;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+}
+
+.banner ul li {
+    width: 10%;
+    float: left;
+}
+
+.banner ul li a {
+    display: block;
+    width: 100%;
+}
+
+.banner ul li img {
+    display: block;
+    width: 100%;
+}
+
+.banner ol {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    bottom: 6px;
+}
+
+.banner ol li {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    float: left;
+}
+
+.banner ol li:first-child {
+    margin-left: 0;
+}
+
+.banner ol .now {
+    background-color: white;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav ul {
+    width: 100%;
+    padding: 10px 0;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav ul li {
+    width: 25%;
+    float: left;
+}
+
+.nav ul li a {
+    display: block;
+    width: 100%;
+}
+
+.nav ul li a img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.nav ul li a p {
+    font-size: 12px;
+    color: #666666;
+    text-align: center;
+    padding: 3px 0 5px 0;
+}
+
+.product {
+    padding: 0 5px;
+}
+
+.product_box {
+    margin-top: 10px;
+    min-height: 200px;
+    box-shadow: 0 0 2px #ccc;
+    background-color: white;
+}
+
+.product_box .title {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product_box .title.nb {
+    border-bottom: none;
+}
+
+.product_box .title h3 {
+    font-size: 14px;
+    text-indent: 20px;
+    font-weight: normal;
+    position: relative;
+}
+
+.product_box .title h3::before {
+    content: "";
+    width: 3px;
+    height: 12px;
+    background-color: #d8505c;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+}
+
+.nb .fr a {
+    margin-right: 10px;
+}
+
+.sk .icon {
+    width: 16px;
+    height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+    background: url("../images/seckill-icon.png") no-repeat center/16px 20px;
+}
+
+.sk .name {
+    float: left;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #d8505c
+}
+
+.sk .time {
+    float: left;
+    margin-left: 10px;
+}
+
+.sk .time span {
+    float: left;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    margin-left: 3px;
+    margin-top: 9px;
+}
+
+.sk .time span:nth-child(3n) {
+    background: #fff;
+    width: 3px;
+    color: #333;
+    font-weight: 700;
+}
+
+.sk .pro {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.sk .pro li {
+    width: 33.3333%;
+    float: left;
+}
+
+.sk .pro li a {
+    display: block;
+    border-right: 1px solid #ddd;
+}
+
+.sk .pro li:last-child a {
+    border-right: none;
+}
+
+.sk .pro li a img {
+    display: block;
+    margin: 0 auto;
+    width: 64%;
+}
+
+.sk .pro li p {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.sk .pro li .save {
+    color: #d8505c;
+}
+
+.sk .pro li .price {
+    color: #666666;
+    text-decoration: line-through;
+}
+
+.w_50p {
+    width: 50%;
+}
+
+.w_50p img {
+    display: block;
+    width: 100%;
+}
+
+.bl {
+    border-left: 1px solid #ddd;
+}
+
+.br {
+    border-right: 1px solid #ddd;
+}
+
+.bb {
+    border-bottom: 1px solid #ddd;
+}

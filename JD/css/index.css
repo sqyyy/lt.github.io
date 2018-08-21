@@ -1,0 +1,419 @@
+.jd {
+    height: 480px;
+    position: relative;
+}
+
+.jd_inner {
+    height: 480px;
+    position: relative;
+    z-index: 1;
+}
+
+.ad {
+    height: 480px;
+    background: url("../images/bg.jpg") no-repeat 0 5px;
+    position: absolute;
+    top: 0;
+    left: -245px;
+    width: 243px;
+
+}
+
+.ad a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ad_r {
+    width: 0;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: 245px;
+    background: url("../images/bgp.jpg");
+    z-index: 99;
+    transition: all 0.8s;
+}
+
+.ad_r a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*.ad_r i { width: 20px;*/
+/*height: 20px;*/
+/*position: absolute;*/
+/*right: 5px;*/
+/*top: 5px;*/
+/*cursor: pointer;*/
+/*text-align: center;*/
+/*line-height: 20px;*/
+/*color: #54586a;*/
+/*background: rgba(255, 255, 255, 0.1);*/
+/*display: none;*/
+/*}*/
+
+.ad:hover .ad_r {
+    width: 990px;
+}
+
+.jd_clo1 {
+    width: 190px;
+    height: 464px;
+    background-color: #FEFEFE;
+    padding-top: 15px;
+    border-top: 1px solid #EDEDED;
+}
+
+.jd_clo1 li {
+    padding-left: 15px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.jd_clo1 li a {
+    font-size: 14px;
+    color: #626262;
+}
+
+.jd_clo1 li a:hover {
+    color: #ff3958;
+}
+
+.jd_clo1 li span {
+    font-size: 12px;
+    color: #626262
+}
+
+.jd_clo1 li:hover {
+    background-color: #e6e0e2;
+}
+
+.jd_clo2 {
+    width: 790px;
+    height: 480px;
+    margin-left: 10px;
+}
+
+.clo2_hd {
+    width: 790px;
+    height: 340px;
+    background-color: #ffc0cb;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.clo2_hd ul {
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*width: 8000px;*/
+}
+
+.clo2_hd ul li {
+    /*float: left;*/
+    position: absolute;
+    display: none;
+}
+
+.clo2_hd ul li:first-child {
+    display: block;
+}
+
+.clo2_hd ol {
+    height: 16px;
+    width: 160px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -80px;
+    border-radius: 8px;
+    z-index: 1;
+
+}
+
+.clo2_hd ol li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 4px 6px;
+    cursor: pointer;
+}
+
+.clo2_hd .current {
+    background-color: #f00;
+}
+
+.arrow_l, .arrow_r {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    width: 30px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    z-index: 1;
+
+}
+
+.arrow_l {
+    left: 0;
+}
+
+.arrow_l:hover, .arrow_r:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.arrow_r {
+    right: 0;
+}
+
+.clo2_bd {
+    width: 790px;
+    height: 130px;
+    margin-bottom: 0;
+}
+
+.clo2_bd div {
+    float: left;
+    width: 390px;
+    height: 130px;
+    position: relative;
+}
+
+.opa:hover::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.leftpic {
+    margin-right: 10px;
+}
+
+.list {
+    width: 999px;
+    height: 480px;
+    position: absolute;
+    left: 191px;
+    top: 0;
+    z-index: 999;
+    display: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.jd_clo3 {
+    width: 190px;
+    height: 470px;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.user {
+    height: 160px;
+}
+
+.userinfo {
+    width: 58px;
+    height: 58px;
+    margin: -10px auto 10px;
+    border: 5px solid #E3E1DF;
+    border-radius: 50%;
+    box-shadow: 5px 5px 25px #DADADA;
+    overflow: hidden;
+    transition: opacity 0.2s;
+}
+
+.userinfo:hover {
+    opacity: 0.7;
+}
+
+.info_img {
+    width: 58px;
+    height: 58px;
+    display: block;
+}
+
+.info_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.login {
+    text-align: center;
+    font-size: 12px;
+}
+
+.login p {
+    color: #888888;
+}
+
+.login a {
+    color: #666;
+    padding: 0 2px;
+    line-height: 20px;
+}
+
+.login a:hover {
+    color: #f10214;
+}
+
+.profit {
+    height: 25px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.profit a {
+    width: 70px;
+    font-size: 12px;
+    margin: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    color: #E43F3B;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 5px 5px 25px #DADADA;
+}
+
+.profit .plus {
+    color: #E5D790;
+    background-color: #363634;
+}
+
+.profit a:hover {
+    color: #FFFFFF;
+    background-color: #E43F3B;
+}
+
+.news {
+    height: 130px;
+
+}
+
+.tab_hd {
+    height: 20px;
+    position: relative;
+    padding-top: 6px;
+}
+
+.tab_hd a {
+    font-size: 12px;
+    color: #333;
+    padding: 0 15px;
+}
+
+.tab_hd .item1 {
+    border-right: 1px solid #dfe0e1;
+}
+
+.tab_hd .more {
+    position: absolute;
+    padding: 0;
+    right: 10px;
+    top: 10px;
+}
+
+.more:hover {
+    color: #f10214;
+}
+
+.tab_line {
+    width: 28px;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    margin-left: 13px;
+    background-color: #f10214;
+}
+
+.tab_bd {
+    height: 96px;
+    margin: 7px 15px 0;
+    border-bottom: 1px solid #EBEAEA;
+    position: relative;
+}
+
+.tab_bd ul {
+    position: absolute;
+    display: none;
+}
+
+.tab_bd .tab_show {
+    display: block;
+}
+
+.tab_bd li {
+    max-width: 160px;
+    height: 22px;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab_bd li a {
+    font-size: 12px;
+    color: #666666;
+}
+
+.tab_bd li a:hover {
+    color: #f10214;
+}
+
+.clo3_service {
+    width: 160px;
+    height: 165px;
+    margin: 15px 15px 10px;
+    overflow: hidden;
+}
+
+.clo3_service ul {
+    width: 164px;
+    height: 168px;
+}
+
+.clo3_service li {
+    width: 40px;
+    height: 55px;
+    border-bottom: 1px solid #EBEAEA;
+    border-right: 1px solid #EBEAEA;
+    float: left;
+
+}
+
+.clo3_service a {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.clo3_service i {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 10px auto 5px;
+    background: url("../images/sprite_fs@1x.png") no-repeat;
+}
+
+.clo3_service p {
+    font-size: 12px;
+    text-align: center;
+    color: #CAB6A2;
+}
