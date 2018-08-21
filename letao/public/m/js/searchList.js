@@ -55,7 +55,7 @@ $(function () {
                         setTimeout(function () {
                             $('.lt_product').html(template('list', data));
                             that.endPulldownToRefresh();
-                            that.refresh(true);
+                            mui('#refreshContainer').pullRefresh().refresh(true);
                         }, 500);
                     });
                 }
@@ -113,7 +113,7 @@ $(function () {
         params[order] = orderVal;
         getSearchData(params, function (data) {
             $('.lt_product').html(template('list', data));
-            that.refresh(true);
+            mui('#refreshContainer').pullRefresh().refresh(true);
         });
     });
 });
